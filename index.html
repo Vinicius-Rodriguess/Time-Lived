@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculador de idade</title>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="geral">
+      <section class="container">
+        <div class="calcular-idade">
+          <div class="texto">
+            <h1>Calcule seu tempo de vida</h1>
+          </div>
+          <div class="form">
+            <label class="label" for="dia">Dia:</label>
+            <input type="number" min="1" max="31" name="dia" class="dia" />
+            <label class="label" for="mes">Mes:</label>
+            <input type="number" min="1" max="12" name="mes" class="mes" />
+            <label class="label" for="ano">Ano:</label>
+            <input type="number" name="ano" class="ano" />
+            <div class="div-btn">
+              <button class="btn" onclick="enviar()">Enviar</button>
+            </div>
+          </div>
+        </div>
+        <div class="divResultado invisivel">
+          <div class="h1-resultado">
+            <h2>Seu tempo de vida:</h2>
+          </div>
+          <div class="p-resultado">
+            
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>
