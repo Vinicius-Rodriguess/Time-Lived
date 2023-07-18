@@ -1,125 +1,124 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 .geral {
-    height: 100vh;
-    background-color: aqua;
-    background-image: url(https://wallpapercave.com/wp/wp7335057.jpg);
-    background: no-repeat cover center;
+  height: 100vh;
+  background-color: aqua;
+  background-image: url(https://wallpapercave.com/wp/wp7335057.jpg);
+  background: no-repeat cover center;
 }
 
 .container {
-    transform: translate(-50%, -50%);
-    display: flex;
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    gap: 10%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  gap: 10%;
 }
 
 .calcular-idade {
-    background-color: whitesmoke;
-    padding: 50px;
-    display: block;
-    border-radius: 50px;
-    width: 400px;
+  background-color: whitesmoke;
+  padding: 50px;
+  display: block;
+  border-radius: 50px;
+  width: 400px;
 }
 
 .divResultado {
-    background-color: whitesmoke;
-    padding: 50px;
-    display: block;
-    border-radius: 50px;
-    width: 400px;
+  background-color: whitesmoke;
+  padding: 50px;
+  display: block;
+  border-radius: 50px;
+  width: 400px;
 }
 
 .invisivel {
-    display: none;
+  display: none;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .label {
-    color: rgb(5, 5, 5);   
-    padding: 3px;
-    margin: 3px;
+  color: rgb(5, 5, 5);
+  padding: 3px;
+  margin: 3px;
 }
 
 input {
-    border: solid 1px black;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    padding: 5px;
-    color: black;
-    font-size: 15px;
-    text-align: center;
+  border: solid 1px black;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  color: black;
+  font-size: 15px;
+  text-align: center;
 }
 
 input:hover {
-    background-color: rgb(238, 235, 235);
+  background-color: rgb(238, 235, 235);
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 .texto {
-    text-align: center;
+  text-align: center;
 }
 
 .div-btn {
-    text-align: center;
+  text-align: center;
 }
 
 .btn {
-    padding: 5px;
-    margin-top: 30px;
-    border-radius: 10px;
-    width: 15em;
-    background-color: rgb(231, 230, 230);
-    color: rgb(0, 0, 0);
-    border: solid 1px black;
+  padding: 5px;
+  margin-top: 30px;
+  border-radius: 10px;
+  width: 15em;
+  background-color: rgb(231, 230, 230);
+  color: rgb(0, 0, 0);
+  border: solid 1px black;
 }
 
 .btn:hover {
-    background-color: rgb(202, 209, 216);
+  background-color: rgb(202, 209, 216);
 }
 
 .h1-resultado {
-    text-align: center;
-    color: rgb(0, 0, 0);
+  text-align: center;
+  color: rgb(0, 0, 0);
 }
 
 h1 {
-    font-weight: normal;
-    margin-bottom: 10px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 
 h2 {
-    font-weight: normal;
-    margin-bottom: 10px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 
-p::before{
-    content: '➡️ ';
+p::before {
+  content: "➡️ ";
 }
 
 .p-resultado {
-    margin: 10px;
-    padding: 10px;
-    gap: px;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.1rem;
+  margin: 10px;
+  padding: 10px;
+  gap: px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
 }
 
 .resultadoTela {
-   padding: 5px;
+  padding: 5px;
 }
-
