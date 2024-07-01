@@ -1,7 +1,8 @@
 const btnCalc = document.querySelector("#btn-calc") as HTMLButtonElement
 const inputDate = document.querySelector("#input-date") as HTMLInputElement
 
-btnCalc.addEventListener("click", () => createResults(inputDate))
+inputDate.addEventListener("input", () => inputDate.classList.remove("error"))
+btnCalc.addEventListener("click", () => {createResults(inputDate)})
 
 interface IResults {
     seconds: string
@@ -20,6 +21,11 @@ const createResults = (inputElement: HTMLInputElement): void => {
 
     const currentDate = new Date()
     const birthDate = new Date(inputElement.value)
+
+    if (birthDate > currentDate) {
+        inputDate.classList.add("error")
+        return
+    }
 
     const results: IResults = {
         birthday: formatDate(birthDate),
@@ -61,15 +67,16 @@ const calcYears: DateFunction = (date1, date2) => date1.getFullYear() - date2.ge
 const calcTimeLived = (date1: Date, date2: Date): string => {
     const years = calcYears(date1, date2)
     const months = date1.getMonth() - date2.getMonth()
-    const days = date1.getDate() - date2.getDate()
+    const days = date1.getDate() > date2.getDate() ? date1.getDate() - date2.getDate() : date2.getDate() - date1.getDate()
     return `Você tem ${years} anos, ${months} meses e ${days} dias de vida!`
 }
 
-const renderResults = (results: any): void => {
+const renderResults = (results: IResults): void => {
     const containerResults = document.querySelector(".container-results") as HTMLDivElement
     containerResults.innerHTML = ""
 
-    for (let i in results) {
+    let i : keyof IResults
+    for (i in results) {
         const text = document.createElement("p")
         text.innerText = results[i]
         containerResults.appendChild(text)
@@ -77,3 +84,13 @@ const renderResults = (results: any): void => {
 
     containerResults.classList.remove("hide")
 }
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) { 
+            (entry.target as HTMLElement).classList.add(`animate-${(entry.target as HTMLElement).dataset.animate}` , 'played')
+        }
+    });
+}, {rootMargin : '-80px'})
+
+document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el as HTMLElement))
